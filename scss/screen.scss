@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+$border-light: 1px solid #e6eaee;
+$border-radius: 0.33rem;
+
+$color-white: #fff;
+
+// @font-face {
+//   font-family: 'Open Sans';
+//   font-style: normal;
+//   font-weight: 300;
+//   src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+// }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+@media (max-width: 319px) {
+}
+
+@media (min-width: 320px) {
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap
+Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    body {
+        background-color: #eff3f6;
+    }
+
+    article.central-points-wrapper {
+        border: $border-light;
+        width: 100%;
+
+        header {
+            display: flex;
+            justify-content: space-evenly;
+
+            div.central-points-header--item {
+                // width: 25%;
+                width: 100%;
+                height: 9rem;
+                // outline: 1px dashed red;
+                margin-right: 2rem;
+                color: $color-white;
+
+                &:nth-child(1) {
+                    background-color: #3b517c;
+                }
+                &:nth-child(2) {
+                    background-color: #66b92e;
+                }
+                &:nth-child(3) {
+                    background-color: #da932c;
+                }
+                &:nth-child(4) {
+                    background-color: #d65b4a;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+
+            p.icon {
+                
+            }
+        }
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
