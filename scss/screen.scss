@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 $border-light: 1px solid #e6eaee;
-$border-radius: 0.33rem;
-
+$border-radius: 0.25rem;
+$color-font-light: #dadfe3;
+$color-h2: #354052;
 $color-white: #fff;
+$color-hover: rgba(226, 231, 238, 0.5);
 
 // @font-face {
 //   font-family: 'Open Sans';
@@ -19,6 +21,26 @@ $color-white: #fff;
 body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
+}
+
+select {
+    color: #354052;
+    background: rgb(242, 244, 247);
+    background: linear-gradient(
+        0deg,
+        rgba(242, 244, 247, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    padding: 0.5rem;
+    border: $border-light;
+    border-radius: $border-radius;
+}
+
+option {
+    color: red;
+}
+
+.btn {
 }
 
 @media (max-width: 319px) {
@@ -37,10 +59,11 @@ Small devices (landscape phones, 576px and up) */
 @media (min-width: 768px) {
     body {
         background-color: #eff3f6;
+        padding: 1rem; // only for test
     }
 
     article.central-points-wrapper {
-        border: $border-light;
+        // border: $border-light;
         width: 100%;
 
         header {
@@ -54,6 +77,8 @@ Small devices (landscape phones, 576px and up) */
                 // outline: 1px dashed red;
                 margin-right: 2rem;
                 color: $color-white;
+                border-radius: $border-radius;
+                padding: 1rem;
 
                 &:nth-child(1) {
                     background-color: #3b517c;
@@ -71,12 +96,101 @@ Small devices (landscape phones, 576px and up) */
             }
         }
 
+        div.content {
+            margin-top: 2rem;
+            // outline: 1px dashed red;
+            border: $border-light;
+            border-radius: $border-radius;
+
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 2rem;
+                border-bottom: $border-light;
+                background-color: $color-white;
+
+                h2 {
+                    font-size: 1.6rem;
+                    font-weight: normal;
+                    color: $color-h2;
+
+                    span {
+                        color: $color-font-light;
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .categories {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                // grid-template-rows: 2fr;
+                font-size: 0.9rem;
+                padding: 10px 0;
+                background-color: #f4f8fa;
+                color: #7f8fa4;
+                font-weight: 600;
+                border-bottom: $border-light;
+
+                & > div {
+                    padding-left: 1rem;
+                }
+            }
+            .row {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                align-items: center;
+
+                padding: 1rem 0;
+                border: $border-light;
+                border-top: none;
+                background-color: $color-white;
+
+                & > div {
+                    padding-left: 1rem;
+                    // outline: 1px dotted red;
+                }
+                & > div:first-child {
+                    font-weight: 600;
+                }
+            }
+
+            div.row:hover {
+                border-left: 3px solid #d43700;
+                margin-left: -2px;
+                background-color: $color-hover;
+            }
+        }
+
         footer {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            margin: 0.8rem 0;
 
-            p.icon {
-                
+            p.button {
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: $border-light;
+                border-radius: $border-radius;
+
+                svg {
+                    height: 1.2rem;
+                    // fill: red;
+                }
+            }
+
+            p.button:hover {
+                background-color: $color-hover;
+                // border: 1px solid red;
+            }
+
+            p.sites {
+                color: #b4b9bf;
+                font-size: 0.8rem;
             }
         }
     }

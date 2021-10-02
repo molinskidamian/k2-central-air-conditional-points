@@ -6,17 +6,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px; }
 
-select {
-  color: #354052;
-  background: #f2f4f7;
-  background: linear-gradient(0deg, #f2f4f7 0%, white 100%);
-  padding: 0.5rem;
-  border: 1px solid #e6eaee;
-  border-radius: 0.25rem; }
-
-option {
-  color: red; }
-
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap
 Small devices (landscape phones, 576px and up) */
@@ -48,7 +37,7 @@ Small devices (landscape phones, 576px and up) */
           background-color: #d65b4a;
           margin-right: 0; }
     article.central-points-wrapper div.content {
-      margin-top: 2rem;
+      margin: 2rem 0;
       border: 1px solid #e6eaee;
       border-radius: 0.25rem; }
       article.central-points-wrapper div.content header {
@@ -68,30 +57,11 @@ Small devices (landscape phones, 576px and up) */
       article.central-points-wrapper div.content .categories {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
         font-size: 0.9rem;
         padding: 10px 0;
         background-color: #f4f8fa;
-        color: #7f8fa4;
-        font-weight: 600;
-        border-bottom: 1px solid #e6eaee; }
-        article.central-points-wrapper div.content .categories > div {
-          padding-left: 1rem; }
-      article.central-points-wrapper div.content .row {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        align-items: center;
-        padding: 1rem 0;
-        border: 1px solid #e6eaee;
-        border-top: none;
-        background-color: #fff; }
-        article.central-points-wrapper div.content .row > div {
-          padding-left: 1rem; }
-        article.central-points-wrapper div.content .row > div:first-child {
-          font-weight: 600; }
-      article.central-points-wrapper div.content div.row:hover {
-        border-left: 3px solid #d43700;
-        margin-left: -2px;
-        background-color: rgba(226, 231, 238, 0.5); }
+        color: #7f8fa4; }
     article.central-points-wrapper footer {
       display: flex;
       justify-content: space-between;
@@ -106,9 +76,8 @@ Small devices (landscape phones, 576px and up) */
         border: 1px solid #e6eaee;
         border-radius: 0.25rem; }
         article.central-points-wrapper footer p.button svg {
-          height: 1.2rem; }
-      article.central-points-wrapper footer p.button:hover {
-        background-color: rgba(226, 231, 238, 0.5); }
+          height: 1.2rem;
+          fill: red; }
       article.central-points-wrapper footer p.sites {
         color: #b4b9bf;
         font-size: 0.8rem; } }
