@@ -168,6 +168,7 @@ Small devices (landscape phones, 576px and up) */
         font-size: 0.8rem; }
 
   section.card {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -207,6 +208,7 @@ Small devices (landscape phones, 576px and up) */
         width: 70%; }
 
   div.curtain {
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -214,7 +216,13 @@ Small devices (landscape phones, 576px and up) */
     background-color: black;
     opacity: 0.7;
     width: 100vw;
-    height: 100vh; } }
+    height: 100vh; }
+
+  .hidden {
+    display: none; }
+
+  .show {
+    display: block; } }
 /* Large devices (desktops, 992px and up) */
 /* Extra large devices (large desktops, 1200px and up) */
 

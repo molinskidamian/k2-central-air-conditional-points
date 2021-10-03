@@ -296,7 +296,7 @@ Small devices (landscape phones, 576px and up) */
 
     section.card {
         // outline: 1px dashed red;
-        // display: none;
+        display: none;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -344,6 +344,7 @@ Small devices (landscape phones, 576px and up) */
     }
 
     div.curtain {
+        display: none;
         position: fixed;
         left: 0;
         top: 0;
@@ -352,6 +353,14 @@ Small devices (landscape phones, 576px and up) */
         opacity: 0.7;
         width: 100vw;
         height: 100vh;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .show {
+        display: block;
     }
 }
 
