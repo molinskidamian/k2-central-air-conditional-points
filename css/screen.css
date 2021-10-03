@@ -1,10 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+svg {
+  height: 1rem; }
+
 * {
   box-sizing: border-box; }
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px; }
+
+label {
+  color: #7f8fa4;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem; }
+
+input {
+  border: 1px solid #ced0da;
+  border-radius: 0.25rem;
+  height: 2rem;
+  width: 100%;
+  color: #354052;
+  padding: 0.8rem 1rem; }
 
 select {
   color: #354052;
@@ -14,8 +32,44 @@ select {
   border: 1px solid #e6eaee;
   border-radius: 0.25rem; }
 
-option {
-  color: red; }
+select:focus {
+  outline: none; }
+
+option.option {
+  background-color: red; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  height: 2.2rem;
+  margin: 0;
+  padding: 0;
+  padding-right: 0.7rem;
+  border: 1px solid #ced0da;
+  border-radius: 0.25rem;
+  color: #343c48;
+  font-weight: 600;
+  font-size: 0.8rem;
+  background: linear-gradient(0deg, #f2f4f7 0%, white 100%); }
+  .btn svg {
+    height: 0.8rem;
+    margin: 0 0.7rem; }
+  .btn:hover {
+    background: linear-gradient(180deg, #f2f4f7 0%, white 100%); }
+
+.success {
+  border: 1px solid #259534;
+  border-radius: 0.25rem;
+  text-align: center;
+  color: #fff;
+  background: #3ab54a;
+  background: linear-gradient(0 deg, #3ab54a 0%, #34aa44 100%); }
+  .success:hover {
+    background: #3ab54a;
+    background: linear-gradient(180 deg, #3ab54a 0%, #34aa44 100%); }
+
+.form-control {
+  margin-bottom: 1rem; }
 
 /* Extra small devices (portrait phones, less than 576px)
 No media query for `xs` since this is the default in Bootstrap
@@ -54,7 +108,7 @@ Small devices (landscape phones, 576px and up) */
       article.central-points-wrapper div.content header {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
         padding: 2rem;
         border-bottom: 1px solid #e6eaee;
         background-color: #fff; }
@@ -111,7 +165,56 @@ Small devices (landscape phones, 576px and up) */
         background-color: rgba(226, 231, 238, 0.5); }
       article.central-points-wrapper footer p.sites {
         color: #b4b9bf;
-        font-size: 0.8rem; } }
+        font-size: 0.8rem; }
+
+  section.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 40vw;
+    min-height: 50vh;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 0.25rem; }
+    section.card header {
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 0.25rem;
+      background: #2ea2f8;
+      background: linear-gradient(0 deg, #2ea2f8 0%, #1891eb 100%);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 0 1rem; }
+      section.card header svg {
+        opacity: 0.3; }
+        section.card header svg:hover {
+          opacity: 1; }
+    section.card .content {
+      margin: 1.2rem 1rem; }
+      section.card .content select {
+        width: 100%; }
+    section.card footer {
+      display: flex;
+      justify-content: center;
+      margin: 2rem; }
+      section.card footer .btn {
+        display: flex;
+        justify-content: center;
+        width: 70%; }
+
+  div.curtain {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #354052;
+    background-color: black;
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh; } }
 /* Large devices (desktops, 992px and up) */
 /* Extra large devices (large desktops, 1200px and up) */
 

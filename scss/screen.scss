@@ -7,6 +7,36 @@ $color-h2: #354052;
 $color-white: #fff;
 $color-hover: rgba(226, 231, 238, 0.5);
 
+@mixin gradientBlue($deg: 0) {
+    background: rgb(46, 162, 248);
+    background: linear-gradient(
+        $deg deg,
+        rgba(46, 162, 248, 1) 0%,
+        rgba(24, 145, 235, 1) 100%
+    );
+}
+
+@mixin gradientGreen($deg: 0) {
+    background: rgb(58, 181, 74);
+    background: linear-gradient(
+        $deg deg,
+        rgba(58, 181, 74, 1) 0%,
+        rgba(52, 170, 68, 1) 100%
+    );
+}
+
+@mixin header() {
+    @include gradientBlue;
+    color: $color-white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0 1rem;
+}
+
+svg {
+    height: 1rem;
+}
+
 // @font-face {
 //   font-family: 'Open Sans';
 //   font-style: normal;
@@ -23,6 +53,24 @@ body {
     font-size: 16px;
 }
 
+label {
+    color: #7f8fa4;
+    font-size: 0.8rem;
+    font-weight: 500;
+    // letter-spacing: -0.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    border: 1px solid #ced0da;
+    border-radius: $border-radius;
+    height: 2rem;
+    width: 100%;
+    color: #354052;
+    padding: 0.8rem 1rem;
+}
+
 select {
     color: #354052;
     background: rgb(242, 244, 247);
@@ -36,11 +84,62 @@ select {
     border-radius: $border-radius;
 }
 
-option {
-    color: red;
+select:focus {
+    outline: none;
+}
+
+option.option {
+    background-color: red;
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    height: 2.2rem;
+    margin: 0;
+    padding: 0;
+    padding-right: 0.7rem;
+    border: 1px solid #ced0da;
+    border-radius: $border-radius;
+    color: #343c48;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+    svg {
+        height: 0.8rem;
+        margin: 0 0.7rem;
+    }
+
+    background: linear-gradient(
+        0deg,
+        rgba(242, 244, 247, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+
+    &:hover {
+        background: linear-gradient(
+            180deg,
+            rgba(242, 244, 247, 1) 0%,
+            rgba(255, 255, 255, 1) 100%
+        );
+    }
+}
+
+.success {
+    border: 1px solid #259534;
+    border-radius: $border-radius;
+    text-align: center;
+    color: $color-white;
+
+    @include gradientGreen;
+
+    &:hover {
+        @include gradientGreen(180);
+    }
+}
+
+.form-control {
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 319px) {
@@ -105,7 +204,7 @@ Small devices (landscape phones, 576px and up) */
             header {
                 display: flex;
                 align-items: center;
-                justify-content: flex-start;
+                justify-content: space-between;
                 padding: 2rem;
                 border-bottom: $border-light;
                 background-color: $color-white;
@@ -193,6 +292,66 @@ Small devices (landscape phones, 576px and up) */
                 font-size: 0.8rem;
             }
         }
+    }
+
+    section.card {
+        // outline: 1px dashed red;
+        // display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 40vw;
+        min-height: 50vh;
+        z-index: 1000;
+        background-color: #fff;
+        border-radius: $border-radius;
+
+        header {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: $border-radius;
+
+            @include header;
+            svg {
+                opacity: 0.3;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .content {
+            margin: 1.2rem 1rem;
+
+            select {
+                width: 100%;
+            }
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            margin: 2rem;
+            .btn {
+                display: flex;
+                justify-content: center;
+                width: 70%;
+            }
+        }
+    }
+
+    div.curtain {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #354052;
+        background-color: black;
+        opacity: 0.7;
+        width: 100vw;
+        height: 100vh;
     }
 }
 
